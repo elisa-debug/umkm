@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEDAI ORANGE & MIE HOTPLATE GACHOOR - Minuman Segar & Mie Lezat</title>
+    <style>
+        /* Additional Marketing Sections Styles */
+        .marketing-section {
+            padding: 40px 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .headline-section {
+            background-color: #FF8C00;
+            color: white;
+            padding: 50px 20px;
+        }
+        
+        .headline {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .subheadline {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+        }
+        
+        .opening-section {
+            background-color: #FFF8F0;
+        }
+        
+        .reason-section {
+            background-color: #f9f9f9;
+        }
+        
+        .benefit-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 280px;
+            text-align: center;
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #FF8C00;
+        }
+        
+        .testimonial-section {
+            background-color: #FFF0E0;
+        }
+        
+        .testimonial-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            position: relative;
+        }
+        
+        .testimonial-quote {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #FF8C00;
+        }
+        
+        .urgency-section {
+            background-color: #FF4500;
+            color: white;
+            padding: 30px 20px;
+        }
+        
+        .countdown {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .cta-section {
+            background-color: #4CAF50;
+            color: white;
+            padding: 50px 20px;
+        }
+        
+        .cta-button {
+            background-color: white;
+            color: #4CAF50;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .bonus-section {
+            background-color: #FFF8F0;
+        }
+        
+        .bonus-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .bonus-icon {
+            font-size: 2rem;
+            margin-right: 20px;
+            color: #FF8C00;
+            min-width: 50px;
+        }
+        
+        .guarantee-section {
+            background-color: #f0f8ff;
+            border: 2px dashed #4CAF50;
+        }
+        
+        .guarantee-badge {
+            font-size: 5rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        
+        .note-section {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Original Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        header {
+            background-color: #FF8C00;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        
+        .cart-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            color: #FF8C00;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 1000;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: #FF4500;
+            color: white;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+        
+        .cart-container {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100vh;
+            background-color: white;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            transition: right 0.3s;
+            z-index: 1001;
+            overflow-y: auto;
+        }
+        
+        .cart-container.active {
+            right: 0;
+        }
+        
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .close-cart {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .cart-items {
+            padding: 20px;
+        }
+        
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cart-item-info {
+            flex: 1;
+        }
+        
+        .cart-item-name {
+            font-weight: bold;
+        }
+        
+        .cart-item-price {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+        }
+        
+        .quantity-btn {
+            background-color: #f0f0f0;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .quantity-value {
+            margin: 0 10px;
+        }
+        
+        .remove-item {
+            background: none;
+            border: none;
+            color: #FF4500;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        .cart-total {
+            padding: 20px;
+            font-weight: bold;
+            text-align: right;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .customer-info {
+            padding: 20px;
+        }
+        
+        .customer-info input,
+        .customer-info textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .customer-info textarea {
+            height: 80px;
+        }
+        
+        .checkout-btn {
+            width: calc(100% - 40px);
+            margin: 20px;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab.active {
+            border-bottom: 3px solid #FF8C00;
+            font-weight: bold;
+        }
+        
+        .menu-section {
+            display: none;
+        }
+        
+        .menu-section.active {
+            display: block;
+        }
+        
+        .menu-category {
+            margin-bottom: 40px;
+        }
+        
+        .category-title {
+            color: #FF8C00;
+            border-bottom: 2px solid #FF8C00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .menu-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .item-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .item-price {
+            color: #FF4500;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .order-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #FF8C00;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .order-btn:hover {
+            background-color: #FF4500;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">KEDAI ORANGE & MIE HOTPLATE GACHOOR</div>
+        </div>
+        <div class="tagline"> Aneka Minuman Segar & Mie Lezat</div>
+    </header>
+    
+    <!-- Marketing Sections -->
+    <!-- Headline Section -->
+    <section class="marketing-section headline-section">
+        <h1 class="headline">Minuman Segar & Mie Hotplate Terenak di Kota!</h1>
+        <p class="subheadline">Nikmati kesegaran buah premium dan kelezatan mie hotplate dengan bumbu rahasia kami</p>
+    </section>
+    
+    <!-- Opening Section -->
+    <section class="marketing-section opening-section">
+        <h2>Selamat Datang di Kedai Orange & Mie Hotplate Gachoor</h2>
+        <p>Kami menghadirkan pengalaman kuliner yang unik dengan menggabungkan minuman segar berkualitas tinggi dan mie hotplate lezat dengan racikan bumbu spesial. Setiap sajian dibuat dengan bahan pilihan dan penuh cinta untuk memastikan Anda mendapatkan rasa yang sempurna setiap kali berkunjung.</p>
+    </section>
+    
+    <!-- Reason Section -->
+    <section class="marketing-section reason-section">
+        <h2>Mengapa Harus Memilih Kami?</h2>
+        <p>Berikut alasan mengapa pelanggan setia selalu kembali ke kedai kami:</p>
+        
+        <div class="benefit-container">
+            <div class="benefit-card">
+                <div class="benefit-icon">🍊</div>
+                <h3>Bahan Premium</h3>
+                <p>Hanya menggunakan buah segar dan bahan berkualitas tinggi untuk setiap minuman dan makanan kami</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">⏱️</div>
+                <h3>Pelayanan Cepat</h3>
+                <p>Pesanan Anda akan disajikan dengan cepat tanpa mengorbankan kualitas</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">💰</div>
+                <h3>Harga Terjangkau</h3>
+                <p>Kualitas premium dengan harga yang ramah di kantong mulai dari Rp5.000 saja</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">👨‍🍳</div>
+                <h3>Rahasia Keluarga</h3>
+                <p>Resep turun temurun yang membuat setiap hidangan terasa spesial dan berbeda</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefit Section -->
+    <section class="marketing-section">
+        <h2>Apa yang Anda Dapatkan di Kedai Kami?</h2>
+        <p>Setiap kunjungan ke Kedai Orange & Mie Hotplate Gachoor akan memberikan Anda:</p>
+        
+        <ul style="text-align: left; max-width: 600px; margin: 20px auto;">
+            <li>Pengalaman rasa yang konsisten setiap kali berkunjung</li>
+            <li>Pilihan lebih dari 50 varian minuman segar</li>
+            <li>10 varian mie hotplate dengan level kepedasan bisa disesuaikan</li>
+            <li>Layanan pesan antar yang cepat dan efisien</li>
+            <li>Suasana nyaman untuk bersantai bersama teman dan keluarga</li>
+        </ul>
+    </section>
+    
+    <!-- Testimonial Section -->
+    <section class="marketing-section testimonial-section">
+        <h2>Apa Kata Pelanggan Kami?</h2>
+        <p>Jangan percaya kata kami, ini pendapat pelanggan setia kami:</p>
+        
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Mie hotplate Gachoor memang juara! Rasanya autentik dan bikin nagih. Sudah jadi langganan tiap minggu!"</p>
+                <p class="testimonial-author">- Budi, Pelanggan Setia</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Smoothies mangganya fresh banget, tidak terlalu manis dan benar-benar terasa buah aslinya. Recommended!"</p>
+                <p class="testimonial-author">- Ani, Mahasiswa</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-quote">"Pelayanannya cepat dan ramah. Minuman bobanya enak dan mie hotplatenya pedasnya pas. Pokoknya top!"</p>
+                <p class="testimonial-author">- Rudi, Karyawan</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Urgency Section -->
+    <section class="marketing-section urgency-section">
+        <h2>PROMO SPESIAL HARI INI SAJA!</h2>
+        <p>Dapatkan diskon 20% untuk pembelian minimal Rp50.000</p>
+        <p>GRATIS ongkir untuk pesanan di atas Rp75.000 (area tertentu)</p>
+        <div class="countdown" id="countdown">Sisa Waktu: 05:23:47</div>
+        <p>Promo hanya berlaku hingga jam 22.00 WIB atau sampai stok habis</p>
+    </section>
+    
+    <!-- Cart Icon -->
+    <div class="cart-icon" onclick="toggleCart()">
+        🛒
+        <span class="cart-count" id="cart-count">0</span>
+    </div>
+    
+    <!-- Cart Sidebar -->
+    <div class="cart-container" id="cart-container">
+        <div class="cart-header">
+            <h2>Keranjang Belanja</h2>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        
+        <div class="cart-total">
+            Total: <span id="cart-total">Rp 0</span>
+        </div>
+        
+        <div class="customer-info">
+            <h3>Informasi Pelanggan</h3>
+            <input type="text" id="customer-name" placeholder="Nama Anda" required>
+            <input type="text" id="customer-address" placeholder="Alamat Pengiriman" required>
+            <textarea id="customer-notes" placeholder="Catatan (opsional)"></textarea>
+        </div>
+        
+        <button class="checkout-btn" onclick="checkout()">Pesan via WhatsApp</button>
+    </div>
+    
+    <!-- CTA Section -->
+    <section class="marketing-section cta-section">
+        <h2>Tunggu Apa Lagi?</h2>
+        <p>Pesan sekarang dan nikmati kelezatan minuman segar dan mie hotplate terbaik di kota!</p>
+        <button class="cta-button" onclick="toggleCart()">PESAN SEKARANG</button>
+    </section>
+    
+    <!-- Bonus Section -->
+    <section class="marketing-section bonus-section">
+        <h2>BONUS SPESIAL UNTUK PEMESANAN HARI INI!</h2>
+        <p>Setiap pembelian minimal Rp50.000 akan mendapatkan:</p>
+        
+        <div class="bonus-item">
+            <div class="bonus-icon">🎁</div>
+            <div>
+                <h3>Gratis 1 Cup Es Teh Original</h3>
+                <p>Nikmati kesegaran es teh kami secara gratis dengan setiap pemesanan</p>
+            </div>
+        </div>
+        
+        <div class="bonus-item">
+            <div class="bonus-icon">💳</div>
+            <div>
+                <h3>Voucher Diskon 10%</h3>
+                <p>Dapatkan voucher untuk pembelian berikutnya</p>
+            </div>
+        </div>
+        
+        <div class="bonus-item">
+            <div class="bonus-icon">🛍️</div>
+            <div>
+                <h3>Stiker Eksklusif</h3>
+                <p>Koleksi stiker eksklusif Kedai Orange & Mie Hotplate Gachoor</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Guarantee Section -->
+    <section class="marketing-section guarantee-section">
+        <div class="guarantee-badge">✓</div>
+        <h2>GARANSI KEPUASAN 100%</h2>
+        <p>Kami menjamin Anda akan puas dengan setiap pesanan dari kami. Jika tidak puas, kami akan mengganti pesanan Anda atau mengembalikan uang Anda tanpa pertanyaan.</p>
+    </section>
+    
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" onclick="openMenu('kedai-orange')">KEDAI ORANGE</div>
+            <div class="tab" onclick="openMenu('hotplate')">MIE HOTPLATE GACHOOR</div>
+        </div>
+        
+              <!-- Kedai Orange Menu -->
+        <div id="kedai-orange" class="menu-section active">
+            <div class="menu-category">
+                <h2 class="category-title">ANEKA SMOOTHIES</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">MANGGA</div>
+                        <div class="item-price">Rp 15.000</div>
+                        <button class="order-btn" onclick="addToCart('MANGGA Smoothie', 15000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">ALPUKAT</div>
+                        <div class="item-price">Rp 15.000</div>
+                        <button class="order-btn" onclick="addToCart('ALPUKAT Smoothie', 15000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">STRAWBERRY</div>
+                        <div class="item-price">Rp 15.000</div>
+                        <button class="order-btn" onclick="addToCart('STRAWBERRY Smoothie', 15000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">BUAH NAGA</div>
+                        <div class="item-price">Rp 15.000</div>
+                        <button class="order-btn" onclick="addToCart('BUAH NAGA Smoothie', 15000)">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-category">
+                <h2 class="category-title">Jelly</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">JELLY</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('JELLY', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">MANGGO</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('MANGGO Jelly', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">ANGGUR</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('ANGGUR Jelly', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">STRAWBERRY</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('STRAWBERRY Jelly', 10000)">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-category">
+                <h2 class="category-title">Chocolate</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">CHOCOLATE</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('CHOCOLATE', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CHOCOLATE STRAWBERRY</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('CHOCOLATE STRAWBERRY', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CHOCOLATE RED VELVET</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('CHOCOLATE RED VELVET', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CHOCOLATE BANANA</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('CHOCOLATE BANANA', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CHOCOLATE TARO</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('CHOCOLATE TARO', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CHOCOLATE GREEN TEA</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('CHOCOLATE GREEN TEA', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CHOCOLATE MATCHA</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('CHOCOLATE MATCHA', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CHOCOLATE COKLAT</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('CHOCOLATE COKLAT', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CHOCOLATE COFFEE</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('CHOCOLATE COFFEE', 10000)">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-category">
+                <h2 class="category-title">Coffee</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">COFFEE ESPRESSO</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('COFFEE ESPRESSO', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">COFFEE CAPPUCINO</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('COFFEE CAPPUCINO', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">COFFEE ARABICA</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('COFFEE ARABICA', 10000)">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-category">
+                <h2 class="category-title">ANEKA BOBA</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">RED VELVET</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('RED VELVET BOBA', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">STRAWBERRY</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('STRAWBERRY BOBA', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">GREEN TEA</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('GREEN TEA BOBA', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">TARO</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('TARO BOBA', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">BROWN SUGAR</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('BROWN SUGAR BOBA', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">COKLAT</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('COKLAT BOBA', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">COFFEE</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('COFFEE BOBA', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">BANANA</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('BANANA BOBA', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">MACHA</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('MACHA BOBA', 10000)">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-category">
+                <h2 class="category-title">SHAKE</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">SHAKE</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('SHAKE', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">STRAWBERRY</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('STRAWBERRY SHAKE', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">TARO</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('TARO SHAKE', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">RED VELVET</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('RED VELVET SHAKE', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">BANANA</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('BANANA SHAKE', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">COFFEE</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('COFFEE SHAKE', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">CHOCOLATE</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('CHOCOLATE SHAKE', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">GREEN TEA</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('GREEN TEA SHAKE', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">MATCHA</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('MATCHA SHAKE', 10000)">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-category">
+                <h2 class="category-title">ICE TEA</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">ICE TEA</div>
+                        <div class="item-price">Rp 5.000</div>
+                        <button class="order-btn" onclick="addToCart('ICE TEA', 5000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">STRAWBERRY TEA</div>
+                        <div class="item-price">Rp 5.000</div>
+                        <button class="order-btn" onclick="addToCart('STRAWBERRY TEA', 5000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">LEMON TEA</div>
+                        <div class="item-price">Rp 5.000</div>
+                        <button class="order-btn" onclick="addToCart('LEMON TEA', 5000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">VANILLA TEA</div>
+                        <div class="item-price">Rp 5.000</div>
+                        <button class="order-btn" onclick="addToCart('VANILLA TEA', 5000)">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            <!-- ME HOTPLATE GACHOOR Menu -->
+        <div id="hotplate" class="menu-section">
+            <div class="menu-category">
+                <h2 class="category-title">VARIAN MIE</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">Mie Gachoör Original</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('Mie/Gachoör Original', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Mie Gachoör Baso</div>
+                        <div class="item-price">Rp 12.000</div>
+                        <button class="order-btn" onclick="addToCart('Mie/Gachoör 6250', 12000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Mie Gachoör Kejú</div>
+                        <div class="item-price">Rp 12.000</div>
+                        <button class="order-btn" onclick="addToCart('Mie/Gachoör Aarjú', 12000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Mie Gachoör Pangsit Basah</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('Mie/Gachoör Gangilla Bach', 10000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Mie Gachoör Sosis</div>
+                        <div class="item-price">Rp 10.000</div>
+                        <button class="order-btn" onclick="addToCart('Mie/Gachoör SOSIS', 10000)">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-category">
+                <h2 class="category-title">VARIAN KWETIAU</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-name">Kwetiau Gachoör Original</div>
+                        <div class="item-price">Rp 13.000</div>
+                        <button class="order-btn" onclick="addToCart('Kwetiau/Gachoör Original', 13000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Kwetiau Gachoör Baso</div>
+                        <div class="item-price">Rp 13.000</div>
+                        <button class="order-btn" onclick="addToCart('Kwetiau/Gachoör 6250', 13000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Kwetiau Gachoör Kejú</div>
+                        <div class="item-price">Rp 13.000</div>
+                        <button class="order-btn" onclick="addToCart('Kwetiau/Gachoör Aarjú', 13000)">+ Keranjang</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Kwetiau Gachoör Sosis</div>
+                        <div class="item-price">Rp 13.000</div>
+                        <button class="order-btn" onclick="addToCart('Kwetiau/Gachoör SOSIS', 13000)">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    
+    <!-- Note Section -->
+    <section class="marketing-section note-section">
+        <p><strong>NB:</strong> Harga dapat berubah tanpa pemberitahuan sebelumnya. Stok terbatas. Untuk pemesanan besar harap menghubungi kami minimal 1 hari sebelumnya. Syarat dan ketentuan berlaku.</p>
+    </section>
+    
+    <footer>
+        <p>© 2025 KEDAI ORANGE & MIE HOTPLATE GACHOOR</p>
+        <p>Hubungi kami via WhatsApp untuk pemesanan..</p>
+        <p>website by elisa yuliawati</p>
+    </footer>
+    
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const endOfDay = new Date();
+            endOfDay.setHours(22, 0, 0, 0); // Set to 10 PM
+            
+            if (now > endOfDay) {
+                document.getElementById('countdown').textContent = "Promo telah berakhir";
+                return;
+            }
+            
+            const diff = endOfDay - now;
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').textContent = 
+                `Sisa Waktu: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Cart functionality
+        let cart = [];
+        
+        function toggleCart() {
+            document.getElementById('cart-container').classList.toggle('active');
+            updateCartDisplay();
+        }
+        
+        function addToCart(name, price) {
+            // Check if item already exists in cart
+            const existingItem = cart.find(item => item.name === name);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name: name,
+                    price: price,
+                    quantity: 1
+                });
+            }
+            
+            // Update cart count
+            updateCartCount();
+            
+            // Show cart notification
+            showCartNotification(name);
+        }
+        
+        function updateCartCount() {
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById('cart-count').textContent = totalItems;
+        }
+        
+        function updateCartDisplay() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = '';
+            
+            let total = 0;
+            
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+                itemElement.innerHTML = `
+                    <div class="cart-item-info">
+                        <div class="cart-item-name">${item.name}</div>
+                        <div class="cart-item-price">Rp ${item.price.toLocaleString()}</div>
+                    </div>
+                    <div class="cart-item-quantity">
+                        <button class="quantity-btn" onclick="changeQuantity(${index}, -1)">-</button>
+                        <span class="quantity-value">${item.quantity}</span>
+                        <button class="quantity-btn" onclick="changeQuantity(${index}, 1)">+</button>
+                    </div>
+                    <button class="remove-item" onclick="removeItem(${index})">×</button>
+                `;
+                
+                cartItemsContainer.appendChild(itemElement);
+            });
+            
+            document.getElementById('cart-total').textContent = `Rp ${total.toLocaleString()}`;
+        }
+        
+        function changeQuantity(index, change) {
+            const newQuantity = cart[index].quantity + change;
+            
+            if (newQuantity < 1) {
+                removeItem(index);
+            } else {
+                cart[index].quantity = newQuantity;
+                updateCartDisplay();
+                updateCartCount();
+            }
+        }
+        
+        function removeItem(index) {
+            cart.splice(index, 1);
+            updateCartDisplay();
+            updateCartCount();
+        }
+        
+       function checkout() {
+    const name = document.getElementById('customer-name').value;
+    const address = document.getElementById('customer-address').value;
+    const notes = document.getElementById('customer-notes').value;
+    
+    if (!name || !address) {
+        alert('Harap isi nama dan alamat Anda');
+        return;
+    }
+    
+    if (cart.length === 0) {
+        alert('Keranjang belanja Anda kosong');
+        return;
+    }
+    
+    // Format WhatsApp message
+    let message = `Halo, saya ingin memesan:\n\n`;
+    
+    cart.forEach(item => {
+        message += `${item.name} (${item.quantity}x) - Rp ${(item.price * item.quantity).toLocaleString()}\n`;
+    });
+    
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    message += `\nTotal: Rp ${total.toLocaleString()}\n\n`;
+    message += `Nama: ${name}\n`;
+    message += `Alamat: ${address}\n`;
+    
+    if (notes) {
+        message += `Catatan: ${notes}\n`;
+    }+
+    
+    // Replace with your actual WhatsApp number
+    const phoneNumber = '6285314396942';
+    
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Open WhatsApp with the message
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+    
+    // Kosongkan keranjang setelah checkout
+    clearCart();
+}
+
+function clearCart() {
+    // Kosongkan array cart
+    cart = [];
+    
+    // Update tampilan keranjang
+    updateCartDisplay();
+    
+    // Update counter keranjang
+    updateCartCount();
+    
+    // Reset form informasi pelanggan
+    document.getElementById('customer-name').value = '';
+    document.getElementById('customer-address').value = '';
+    document.getElementById('customer-notes').value = '';
+}
+        
+        function showCartNotification(itemName) {
+            const notification = document.createElement('div');
+            notification.style.position = 'fixed';
+            notification.style.bottom = '20px';
+            notification.style.right = '20px';
+            notification.style.backgroundColor = '#4CAF50';
+            notification.style.color = 'white';
+            notification.style.padding = '10px 20px';
+            notification.style.borderRadius = '5px';
+            notification.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+            notification.style.zIndex = '1000';
+            notification.style.transition = 'opacity 0.5s';
+            notification.textContent = `${itemName} ditambahkan ke keranjang`;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 500);
+            }, 3000);
+        }
+        
+        // Menu tab functionality
+        function openMenu(menuName) {
+            // Hide all menu sections
+            const menuSections = document.getElementsByClassName('menu-section');
+            for (let i = 0; i < menuSections.length; i++) {
+                menuSections[i].classList.remove('active');
+            }
+            
+            // Show the selected menu section
+            document.getElementById(menuName).classList.add('active');
+            
+            // Update active tab
+            const tabs = document.getElementsByClassName('tab');
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            
+            // Find the clicked tab and make it active
+            for (let i = 0; i < tabs.length; i++) {
+                if (tabs[i].textContent.toLowerCase().includes(menuName.toLowerCase())) {
+                    tabs[i].classList.add('active');
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
